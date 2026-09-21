@@ -1,0 +1,1743 @@
+  <!DOCTYPE html>
+
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>كلية العلاج الطبيعي - جامعة بني سويف الأهلية</title>
+
+<!-- Open Graph tags for Facebook Preview -->
+<meta property="og:title" content="كلية العلاج الطبيعي - جامعة بني سويف الأهلية">
+<meta property="og:description" content="جدول اليوم التعريفي والجداول الدراسية وتقييم الفعالية">
+<meta property="og:image" content="logo.jpg">
+<meta property="og:type" content="website">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+        font-family: 'Tajawal', sans-serif;
+        background-color: #070b19;
+        color: #1e293b;
+        display: flex;
+        justify-content: center;
+        min-height: 100vh;
+        padding: 16px 0;
+        position: relative;
+        overflow-x: hidden;
+    }
+
+    .bg-animations {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        pointer-events: none;
+        z-index: 0;
+        overflow: hidden;
+    }
+
+    .floating-item {
+        position: fixed;
+        animation: floatRandom linear infinite;
+        opacity: 0;
+        user-select: none;
+    }
+
+    .floating-brain {
+        color: rgba(244, 114, 182, 0.65);
+        font-size: 1.65rem;
+        filter: drop-shadow(0 0 3px rgba(244,114,182,0.5));
+    }
+
+    .floating-bone {
+        color: rgba(56, 189, 248, 0.58);
+        font-size: 1.5rem;
+        filter: drop-shadow(0 0 3px rgba(56,189,248,0.4));
+    }
+
+    .floating-heart {
+        color: rgba(239, 68, 68, 0.62);
+        font-size: 1.4rem;
+        filter: drop-shadow(0 0 3px rgba(239,68,68,0.4));
+    }
+
+    .floating-goniometer {
+        color: rgba(217, 119, 6, 0.68);
+        font-size: 1.6rem;
+        filter: drop-shadow(0 0 3px rgba(217,119,6,0.45));
+    }
+
+    .floating-triangle {
+        color: rgba(56, 189, 248, 0.52);
+        font-size: 1.4rem;
+    }
+
+    @keyframes floatRandom {
+        0% {
+            transform: translateY(115vh) translateX(0) rotate(0deg);
+            opacity: 0;
+        }
+
+        15% {
+            opacity: 0.85;
+        }
+
+        85% {
+            opacity: 0.85;
+        }
+
+        100% {
+            transform: translateY(-20vh) translateX(55px) rotate(360deg);
+            opacity: 0;
+        }
+    }
+
+    .mobile-container {
+        width: 100%;
+        max-width: 410px;
+        background-color: rgba(15, 23, 42, 0.95);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(56, 189, 248, 0.35);
+        border-radius: 20px;
+        padding: 18px 14px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .header {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        background: linear-gradient(
+            135deg,
+            rgba(30, 58, 138, 0.4),
+            rgba(56, 189, 248, 0.18)
+        );
+        padding: 14px;
+        border-radius: 14px;
+        border: 1px solid rgba(217, 119, 6, 0.5);
+    }
+
+    .logos {
+        display: flex;
+        gap: 14px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logos img {
+        height: 46px;
+        width: auto;
+        max-width: 120px;
+        object-fit: contain;
+        border: 1px solid rgba(217, 119, 6, 0.45);
+        border-radius: 8px;
+        padding: 2px;
+        background: #fff;
+    }
+
+    .title-block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 4px;
+    }
+
+    .title-ar {
+        font-size: 1.1rem;
+        font-weight: 800;
+        color: #ffffff;
+        line-height: 1.35;
+    }
+
+    .title-en {
+        font-family: 'Inter', sans-serif;
+        font-size: 0.74rem;
+        font-weight: 700;
+        color: #d97706;
+        letter-spacing: 0.5px;
+        text-shadow: 0 0 6px rgba(217, 119, 6, 0.3);
+    }
+
+    .info-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .info-box-square {
+        aspect-ratio: 1 / 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        gap: 6px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(56, 189, 248, 0.35);
+        border-radius: 12px;
+        padding: 8px;
+        font-size: 0.78rem;
+        font-weight: 700;
+        color: #f8fafc;
+        cursor: pointer;
+        transition: transform 0.15s ease,
+                    border-color 0.15s ease,
+                    box-shadow 0.15s ease;
+    }
+
+    .info-icon {
+        font-size: 1.35rem;
+    }
+
+    .section-label {
+        font-size: 0.88rem;
+        font-weight: 800;
+        color: #38bdf8;
+        text-align: center;
+        margin-bottom: -4px;
+    }
+
+    .person-card {
+        background: linear-gradient(
+            135deg,
+            rgba(30, 58, 138, 0.45),
+            rgba(56, 189, 248, 0.14)
+        );
+        border: 1px solid rgba(56, 189, 248, 0.45);
+        border-radius: 14px;
+        padding: 12px;
+        text-align: center;
+        color: #ffffff;
+        box-shadow: 0 4px 14px rgba(0,0,0,0.35);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+        transition: transform 0.15s ease,
+                    box-shadow 0.15s ease,
+                    border-color 0.15s ease;
+    }
+
+    .person-card.large-supervision img {
+        width: 78px;
+        height: 78px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid rgba(56, 189, 248, 0.8);
+        background: rgba(255,255,255,0.15);
+        box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3);
+    }
+
+    .person-card.large-supervision {
+        padding: 16px;
+        background: linear-gradient(
+            135deg,
+            rgba(30, 58, 138, 0.6),
+            rgba(56, 189, 248, 0.22)
+        );
+    }
+
+    .care-stack {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .care-stack .person-card {
+        flex-direction: row;
+        align-items: center;
+        text-align: right;
+        padding: 10px 14px;
+        gap: 12px;
+    }
+
+    .care-stack .person-card img {
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid rgba(56, 189, 248, 0.6);
+        flex-shrink: 0;
+        background: #fff;
+    }
+
+    .person-info {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+    }
+
+    .person-card.large-supervision .person-info {
+        align-items: center;
+    }
+
+    .name-text {
+        font-size: 0.95rem;
+        font-weight: 800;
+        color: #ffffff;
+    }
+
+    .role-text {
+        font-size: 0.73rem;
+        font-weight: 500;
+        color: #93c5fd;
+    }
+
+    .section-header-banner {
+        background: linear-gradient(90deg, #1e3a8a, #38bdf8);
+        color: #ffffff;
+        font-size: 0.92rem;
+        font-weight: 800;
+        text-align: center;
+        padding: 7px;
+        border-radius: 10px;
+        letter-spacing: 0.3px;
+    }
+
+    .sponsors-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+    }
+
+    .sponsor-item {
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(56, 189, 248, 0.25);
+        border-radius: 10px;
+        padding: 8px 6px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+        text-align: center;
+        cursor: pointer;
+        transition: transform 0.15s ease,
+                    border-color 0.15s ease,
+                    box-shadow 0.15s ease;
+    }
+
+    .sponsor-item img {
+        width: 100%;
+        height: 40px;
+        object-fit: contain;
+        background: #fff;
+        border-radius: 6px;
+        padding: 2px;
+    }
+
+    .sponsor-placeholder {
+        width: 100%;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #fff;
+        border-radius: 6px;
+        color: #1e3a8a;
+        font-size: 0.72rem;
+        font-weight: 800;
+    }
+
+    .sponsor-item span {
+        font-family: 'Inter', sans-serif;
+        font-size: 0.65rem;
+        font-weight: 600;
+        color: #e2e8f0;
+    }
+
+    .schedule-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 7px;
+    }
+
+    .schedule-item {
+        border-radius: 10px;
+        padding: 9px 8px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 58px;
+        cursor: pointer;
+        transition: transform 0.15s ease,
+                    box-shadow 0.15s ease,
+                    border-color 0.15s ease;
+    }
+
+    .schedule-item.navy-tone {
+        background: linear-gradient(
+            135deg,
+            rgba(30, 58, 138, 0.45),
+            rgba(15, 23, 42, 0.5)
+        );
+        color: #f0f9ff;
+        border: 1px solid rgba(56, 189, 248, 0.3);
+        box-shadow: inset 0 0 0 1px rgba(255,255,255,0.1);
+    }
+
+    .schedule-item.leather-tone {
+        background: linear-gradient(
+            135deg,
+            rgba(180, 115, 60, 0.35),
+            rgba(135, 75, 30, 0.3)
+        );
+        color: #fffbeb;
+        border: 1px solid rgba(217, 119, 6, 0.45);
+        box-shadow: inset 0 0 0 1px rgba(251, 191, 36, 0.15);
+    }
+
+    .schedule-title {
+        font-size: 0.8rem;
+        font-weight: 800;
+        line-height: 1.25;
+    }
+
+    .schedule-sub {
+        font-size: 0.66rem;
+        color: rgba(255,255,255,0.88);
+        margin-top: 3px;
+    }
+
+    .academic-schedule-box {
+        background: #ffffff;
+        border-radius: 12px;
+        padding: 8px;
+        color: #0f172a;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        overflow-x: auto;
+    }
+
+    .academic-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.62rem;
+        text-align: center;
+        min-width: 680px;
+    }
+
+    .academic-table th,
+    .academic-table td {
+        border: 1px solid #cbd5e1;
+        padding: 4px 2px;
+        font-weight: 700;
+    }
+
+    .academic-table th {
+        background-color: #1e3a8a;
+        color: #ffffff;
+    }
+
+    .academic-table tr:nth-child(even) {
+        background-color: #f8fafc;
+    }
+
+    .lec-tag {
+        color: #dc2626;
+        font-size: 0.58rem;
+        display: block;
+        font-weight: 800;
+    }
+
+    .sec-tag {
+        color: #2563eb;
+        font-size: 0.58rem;
+        display: block;
+        font-weight: 800;
+    }
+
+    .day-cell {
+        background-color: #0f172a;
+        color: #fff;
+        font-weight: 800;
+    }
+
+    .page-bump {
+        transform: scale(0.96) translateY(2px) !important;
+        border-color: #f59e0b !important;
+        box-shadow:
+            0 0 20px rgba(245, 158, 11, 0.6),
+            inset 0 0 10px rgba(245, 158, 11, 0.2) !important;
+        filter: brightness(1.08);
+    }
+
+    .feedback-section {
+        background: rgba(30, 58, 138, 0.2);
+        border: 1px solid rgba(56, 189, 248, 0.35);
+        border-radius: 12px;
+        padding: 12px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .feedback-question {
+        font-size: 0.85rem;
+        font-weight: 800;
+        color: #ffffff;
+        text-align: center;
+    }
+
+    .stars-container {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        cursor: pointer;
+    }
+
+    .star {
+        font-size: 1.5rem;
+        color: rgba(255, 255, 255, 0.25);
+        transition:
+            color 0.2s ease,
+            transform 0.15s ease,
+            text-shadow 0.2s ease;
+    }
+
+    .star.active {
+        color: #f59e0b;
+        transform: scale(1.18);
+        text-shadow: 0 0 10px rgba(245, 158, 11, 0.7);
+    }
+
+    .feedback-textarea {
+        width: 100%;
+        background: rgba(15, 23, 42, 0.6);
+        border: 1px solid rgba(56, 189, 248, 0.3);
+        border-radius: 8px;
+        padding: 8px;
+        color: #ffffff;
+        font-family: 'Tajawal', sans-serif;
+        font-size: 0.75rem;
+        resize: none;
+        height: 48px;
+        outline: none;
+    }
+
+    .feedback-textarea::placeholder {
+        color: rgba(255, 255, 255, 0.5);
+    }
+
+    .feedback-label {
+        font-size: 0.78rem;
+        font-weight: 800;
+        color: #f59e0b;
+        margin-bottom: -4px;
+    }
+
+    .submit-feedback-btn {
+        width: 100%;
+        border: none;
+        outline: none;
+        background: linear-gradient(90deg, #1e3a8a, #38bdf8);
+        color: #ffffff;
+        font-family: 'Tajawal', sans-serif;
+        font-size: 0.85rem;
+        font-weight: 800;
+        padding: 11px;
+        border-radius: 9px;
+        cursor: pointer;
+        transition:
+            transform 0.15s ease,
+            box-shadow 0.15s ease,
+            opacity 0.15s ease;
+        margin-top: 2px;
+    }
+
+    .submit-feedback-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(56, 189, 248, 0.35);
+    }
+
+    .submit-feedback-btn:active {
+        transform: scale(0.97);
+    }
+
+    .submit-feedback-btn:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+        transform: none;
+    }
+
+    .feedback-status {
+        text-align: center;
+        font-size: 0.75rem;
+        font-weight: 700;
+        min-height: 18px;
+        margin-top: 2px;
+    }
+
+    .footer {
+        text-align: center;
+        font-size: 0.72rem;
+        color: #94a3b8;
+        border-top: 1px solid rgba(255,255,255,0.08);
+        padding-top: 8px;
+    }
+
+    /* تحسين الموبايل */
+    @media (max-width: 360px) {
+        .mobile-container {
+            padding: 14px 10px;
+        }
+
+        .title-ar {
+            font-size: 1rem;
+        }
+
+        .schedule-title {
+            font-size: 0.72rem;
+        }
+
+        .schedule-sub {
+            font-size: 0.6rem;
+        }
+
+        .name-text {
+            font-size: 0.85rem;
+        }
+    }
+</style>
+```
+
+</head>
+
+<body>
+
+```
+<!-- الخلفية المتحركة -->
+<div class="bg-animations" id="bgAnimations"></div>
+
+<div class="mobile-container">
+
+    <!-- الرأس والشعار -->
+    <div class="header">
+
+        <div class="logos">
+            <img src="logo.jpg" alt="شعار الكلية">
+        </div>
+
+        <div class="title-block">
+            <div class="title-ar">
+                كلية العلاج الطبيعي - جامعة بني سويف الأهلية
+            </div>
+
+            <div class="title-en">
+                Faculty of Physical Therapy | BSNU
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- التاريخ واللوكيشن -->
+    <div class="info-grid">
+
+        <div class="info-box-square interactive-element">
+            <span class="info-icon">📅</span>
+
+            <span>
+                التاريخ<br>
+                الثلاثاء 22/9/2026
+            </span>
+        </div>
+
+        <div class="info-box-square interactive-element">
+            <span class="info-icon">📍</span>
+
+            <span>
+                اللوكيشن<br>
+                مبنى D - قاعة 308
+            </span>
+        </div>
+
+    </div>
+
+
+    <!-- تحت رعاية -->
+    <div class="section-label">
+        تحت رعاية
+    </div>
+
+    <div class="person-card large-supervision interactive-element">
+
+        <img
+            src="tarek.jpg"
+            alt="الأستاذ الدكتور طارق علي"
+        >
+
+        <div class="person-info">
+
+            <span class="name-text">
+                الأستاذ الدكتور طارق علي
+            </span>
+
+            <span class="role-text">
+                رئيس جامعة بني سويف الأهلية
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <!-- تحت إشراف -->
+    <div class="section-label">
+        تحت إشراف
+    </div>
+
+    <div class="care-stack">
+
+        <div class="person-card interactive-element">
+
+            <img
+                src="rasha.jpg"
+                alt="الأستاذ الدكتور رشا توفيق"
+            >
+
+            <div class="person-info">
+
+                <span class="name-text">
+                    الأستاذ الدكتور رشا توفيق
+                </span>
+
+                <span class="role-text">
+                    نائب رئيس الجامعة للشؤون الأكاديمية
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="person-card interactive-element">
+
+            <img
+                src="ahmed.jpg"
+                alt="الأستاذ الدكتور أحمد الجندي"
+            >
+
+            <div class="person-info">
+
+                <span class="name-text">
+                    الأستاذ الدكتور أحمد الجندي
+                </span>
+
+                <span class="role-text">
+                    عميد قطاع العلوم الصحية
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="person-card interactive-element">
+
+            <img
+                src="basem.jpg"
+                alt="الأستاذ الدكتور باسم أنور"
+            >
+
+            <div class="person-info">
+
+                <span class="name-text">
+                    الأستاذ الدكتور باسم أنور
+                </span>
+
+                <span class="role-text">
+                    رئيس قطاع شؤون التعليم والطلاب
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="person-card interactive-element">
+
+            <img
+                src="dina.jpg"
+                alt="دكتور دينا الأمير"
+            >
+
+            <div class="person-info">
+
+                <span class="name-text">
+                    دكتور دينا الأمير
+                </span>
+
+                <span class="role-text">
+                    مدير برنامج العلاج الطبيعي
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- الرعاة -->
+    <div class="section-header-banner">
+        Sponsors
+    </div>
+
+    <div class="sponsors-grid">
+
+        <div class="sponsor-item interactive-element">
+
+            <img
+                src="mona.jpg"
+                alt="صيدلية د. منى"
+            >
+
+            <span>
+                Mona's Pharmacy
+            </span>
+
+        </div>
+
+
+        <!-- لا توجد صورة Waffle ضمن الملفات المرسلة -->
+        <div class="sponsor-item interactive-element">
+
+            <div class="sponsor-placeholder">
+                Waffle & Donuts
+            </div>
+
+            <span>
+                Waffle & Donuts
+            </span>
+
+        </div>
+
+
+        <div class="sponsor-item interactive-element">
+
+            <img
+                src="scrub.jpg"
+                alt="سكراب هاوس"
+            >
+
+            <span>
+                Scrub House
+            </span>
+
+        </div>
+
+
+        <div class="sponsor-item interactive-element">
+
+            <img
+                src="elite.jpg"
+                alt="إيليت جيم"
+            >
+
+            <span>
+                Elite Gym
+            </span>
+
+        </div>
+
+
+        <div class="sponsor-item interactive-element">
+
+            <img
+                src="raq.jpg"
+                alt="راك برفان"
+            >
+
+            <span>
+                Raq Perfume
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <!-- جدول اليوم التعريفي -->
+    <div class="section-header-banner">
+        فقرات اليوم التعريفي
+    </div>
+
+    <div class="schedule-grid">
+
+        <div class="schedule-item navy-tone interactive-element">
+            <div class="schedule-title">
+                القرآن الكريم
+            </div>
+
+            <div class="schedule-sub">
+                د/ حسن محمد
+            </div>
+        </div>
+
+
+        <div class="schedule-item navy-tone interactive-element">
+            <div class="schedule-title">
+                كلمة مدير البرنامج
+            </div>
+
+            <div class="schedule-sub">
+                د/ دينا الأمير
+            </div>
+        </div>
+
+
+        <div class="schedule-item leather-tone interactive-element">
+            <div class="schedule-title">
+                أقسام الكلية
+            </div>
+
+            <div class="schedule-sub">
+                د/ رؤى محمد - د/ مريم سليمان - د/ مريم أبو بكر
+            </div>
+        </div>
+
+
+        <div class="schedule-item leather-tone interactive-element">
+            <div class="schedule-title">
+                الإرشاد الأكاديمي
+            </div>
+
+            <div class="schedule-sub">
+                --
+            </div>
+        </div>
+
+
+        <div class="schedule-item navy-tone interactive-element">
+            <div class="schedule-title">
+                سنة أولى جامعة
+            </div>
+
+            <div class="schedule-sub">
+                د/ أحمد شريف - د/ أحمد هيثم - د/ منال سيد - د/ محمد ربيع - د/ عبدالرحمن أشرف
+            </div>
+        </div>
+
+
+        <div class="schedule-item navy-tone interactive-element">
+            <div class="schedule-title">
+                مشكلة الغربة
+            </div>
+
+            <div class="schedule-sub">
+                د/ مصطفى أحمد - د/ أحمد عبدالله
+            </div>
+        </div>
+
+
+        <div class="schedule-item leather-tone interactive-element">
+            <div class="schedule-title">
+                الحوار التمثيلي
+            </div>
+
+            <div class="schedule-sub">
+                د/ مريم خالد - د/ شهد عيد
+            </div>
+        </div>
+
+
+        <div class="schedule-item leather-tone interactive-element">
+            <div class="schedule-title">
+                ليه علاج طبيعي؟ اعرف قيمتك
+            </div>
+
+            <div class="schedule-sub">
+                د/ عمر دياب - د/ عبدالرحمن ياسر - د/ روفيدة أحمد - د/ إسراء ياسر
+            </div>
+        </div>
+
+
+        <div class="schedule-item navy-tone interactive-element">
+            <div class="schedule-title">
+                فرص العمل بعد التخرج
+            </div>
+
+            <div class="schedule-sub">
+                د/ محمد الشباسي - د/ آدم عتريس - د/ آلاء احمد
+            </div>
+        </div>
+
+
+        <div class="schedule-item navy-tone interactive-element">
+            <div class="schedule-title">
+                من سيربح النعنوش
+            </div>
+
+            <div class="schedule-sub">
+                د/ منة شريف - د/ كريم محمد
+            </div>
+        </div>
+
+
+        <div class="schedule-item leather-tone interactive-element">
+            <div class="schedule-title">
+                مندوب الدفعة / اتحاد الطلاب
+            </div>
+
+            <div class="schedule-sub">
+                د/ أحمد منعم - د/ محمود عبدالعظيم
+            </div>
+        </div>
+
+
+        <div class="schedule-item leather-tone interactive-element">
+            <div class="schedule-title">
+                تكريم أوائل الدفعات
+            </div>
+        </div>
+
+
+        <div class="schedule-item navy-tone interactive-element">
+            <div class="schedule-title">
+                فعاليات ومواهب الكلية
+            </div>
+
+            <div class="schedule-sub">
+                د/ ملك عمر - د/ روضة أحمد - د/ هاجر محمد
+            </div>
+        </div>
+
+
+        <div class="schedule-item navy-tone interactive-element">
+            <div class="schedule-title">
+                الجولات التفقدية
+            </div>
+
+            <div class="schedule-sub">
+                جولة تعريفية بالمرافق
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- الجدول الدراسي للترم الحالي -->
+    <div class="section-header-banner">
+        الجدول الدراسي للترم الحالي
+    </div>
+
+    <div class="academic-schedule-box interactive-element">
+
+        <table class="academic-table">
+
+            <thead>
+
+                <tr>
+                    <th>Day</th>
+                    <th>Place</th>
+                    <th>Groups</th>
+                    <th>9-10</th>
+                    <th>10-11</th>
+                    <th>11-12</th>
+                    <th>12-1</th>
+                    <th>1-2</th>
+                    <th>2-3</th>
+                    <th>3-4</th>
+                </tr>
+
+            </thead>
+
+
+            <tbody>
+
+                <!-- SAT -->
+
+                <tr>
+
+                    <td class="day-cell" rowspan="3">
+                        SAT
+                    </td>
+
+                    <td>D211</td>
+
+                    <td>BOTH</td>
+
+                    <td colspan="2">
+                        Anatomy 1
+                        <span class="lec-tag">LEC</span>
+                    </td>
+
+                    <td>
+                        Bio 1
+                        <span class="lec-tag">LEC</span>
+                    </td>
+
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>D205</td>
+
+                    <td>G1</td>
+
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+
+                    <td colspan="2">
+                        Biochemistry
+                        <span class="sec-tag">SEC</span>
+                    </td>
+
+                    <td colspan="2">
+                        Anatomy 1
+                        <span class="sec-tag">SEC</span>
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>D204</td>
+
+                    <td>G2</td>
+
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+
+                    <td colspan="2">
+                        Anatomy 1
+                        <span class="sec-tag">SEC</span>
+                    </td>
+
+                    <td colspan="2">
+                        Biochemistry
+                        <span class="sec-tag">SEC</span>
+                    </td>
+
+                </tr>
+
+
+                <!-- SUN -->
+
+                <tr>
+
+                    <td class="day-cell" rowspan="3">
+                        SUN
+                    </td>
+
+                    <td>D211</td>
+
+                    <td>BOTH</td>
+
+                    <td>
+                        Micro
+                    </td>
+
+                    <td>
+                        Biophysics
+                        <span class="lec-tag">LEC</span>
+                    </td>
+
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>D301</td>
+
+                    <td>G1</td>
+
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+
+                    <td colspan="2">
+                        Biophysics
+                        <span class="sec-tag">SEC</span>
+                    </td>
+
+                    <td colspan="2">
+                        Physiology
+                        <span class="sec-tag">SEC</span>
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>D305</td>
+
+                    <td>G2</td>
+
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+
+                    <td colspan="2">
+                        Physiology
+                        <span class="sec-tag">SEC</span>
+                    </td>
+
+                    <td colspan="2">
+                        Biophysics
+                        <span class="sec-tag">SEC</span>
+                    </td>
+
+                </tr>
+
+
+                <!-- MON -->
+
+                <tr>
+
+                    <td class="day-cell">
+                        MON
+                    </td>
+
+                    <td>D203</td>
+
+                    <td>BOTH</td>
+
+                    <td colspan="2">
+                        Physiology
+                        <span class="lec-tag">LEC</span>
+                    </td>
+
+                    <td colspan="2">
+                        Histology
+                        <span class="lec-tag">LEC</span>
+                    </td>
+
+                    <td colspan="2">
+                        Histology
+                        <span class="sec-tag">SEC</span>
+                    </td>
+
+                    <td colspan="2">
+                        English
+                        <span class="lec-tag">LEC</span>
+                    </td>
+
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+
+    <!-- تقييم اليوم -->
+    <div class="feedback-section interactive-element">
+
+        <div class="feedback-question">
+            ما تقييمك لليوم؟
+        </div>
+
+
+        <div class="stars-container" id="starsContainer">
+
+            <span class="star" data-value="1">★</span>
+            <span class="star" data-value="2">★</span>
+            <span class="star" data-value="3">★</span>
+            <span class="star" data-value="4">★</span>
+            <span class="star" data-value="5">★</span>
+
+        </div>
+
+
+        <div class="feedback-label">
+            أكتر حاجة عجبتك في اليوم؟
+        </div>
+
+        <textarea
+            id="likedInput"
+            class="feedback-textarea interactive-element"
+            placeholder="اكتب أكتر فقرة أو حاجة عجبتك..."
+        ></textarea>
+
+
+        <div class="feedback-label">
+            أي اقتراحات؟
+        </div>
+
+        <textarea
+            id="suggestionsInput"
+            class="feedback-textarea interactive-element"
+            placeholder="اكتب اقتراحاتك هنا..."
+        ></textarea>
+
+
+        <div class="feedback-label">
+            سلبيات اليوم؟
+        </div>
+
+        <textarea
+            id="negativeInput"
+            class="feedback-textarea interactive-element"
+            placeholder="اكتب سلبيات اليوم إن وجدت..."
+        ></textarea>
+
+
+        <button
+            type="button"
+            id="submitFeedback"
+            class="submit-feedback-btn"
+        >
+            إرسال التقييم
+        </button>
+
+
+        <div
+            id="feedbackStatus"
+            class="feedback-status"
+        ></div>
+
+    </div>
+
+
+    <!-- Footer -->
+    <div class="footer">
+        جميع الحقوق محفوظة © كلية العلاج الطبيعي - بني سويف الأهلية 2026
+    </div>
+
+</div>
+
+
+<script>
+
+    /* ================================
+       Google Sheets
+    ================================= */
+
+    const GOOGLE_SHEETS_URL =
+        "https://script.google.com/macros/s/AKfycby3NxilvXW6-l4zA7p5bM2OMj3ZMPulX9l4Ov1oM2qHWJcbFWqX2jrhhQIdcIOWRylC/exec";
+
+
+    /* ================================
+       الخلفية المتحركة
+    ================================= */
+
+    const bgItems = [
+        {
+            icon: '🧠',
+            cls: 'floating-brain'
+        },
+        {
+            icon: '🦴',
+            cls: 'floating-bone'
+        },
+        {
+            icon: '🫀',
+            cls: 'floating-heart'
+        },
+        {
+            icon: '📐',
+            cls: 'floating-goniometer'
+        },
+        {
+            icon: '🔺',
+            cls: 'floating-triangle'
+        },
+        {
+            icon: '🦴',
+            cls: 'floating-bone'
+        },
+        {
+            icon: '🧠',
+            cls: 'floating-brain'
+        }
+    ];
+
+
+    const bgContainer =
+        document.getElementById('bgAnimations');
+
+
+    for (let i = 0; i < 35; i++) {
+
+        const config =
+            bgItems[
+                Math.floor(
+                    Math.random() * bgItems.length
+                )
+            ];
+
+
+        const iconEl =
+            document.createElement('div');
+
+
+        iconEl.classList.add(
+            'floating-item',
+            config.cls
+        );
+
+
+        iconEl.textContent =
+            config.icon;
+
+
+        iconEl.style.left =
+            `${Math.random() * 95}vw`;
+
+
+        const duration =
+            10 + Math.random() * 12;
+
+
+        const delay =
+            Math.random() * 15;
+
+
+        iconEl.style.animationDuration =
+            `${duration}s`;
+
+
+        iconEl.style.animationDelay =
+            `${delay}s`;
+
+
+        bgContainer.appendChild(iconEl);
+
+    }
+
+
+    /* ================================
+       نظام النجوم
+    ================================= */
+
+    const stars =
+        document.querySelectorAll('.star');
+
+
+    let selectedRating = 0;
+
+
+    stars.forEach((star) => {
+
+        star.addEventListener('click', () => {
+
+            const value =
+                parseInt(
+                    star.getAttribute('data-value')
+                );
+
+
+            selectedRating = value;
+
+
+            stars.forEach((s, idx) => {
+
+                if (idx < value) {
+
+                    s.classList.add('active');
+
+                } else {
+
+                    s.classList.remove('active');
+
+                }
+
+            });
+
+        });
+
+    });
+
+
+    /* ================================
+       إرسال التقييم
+    ================================= */
+
+    const submitButton =
+        document.getElementById(
+            'submitFeedback'
+        );
+
+
+    const feedbackStatus =
+        document.getElementById(
+            'feedbackStatus'
+        );
+
+
+    submitButton.addEventListener(
+        'click',
+        async () => {
+
+            const liked =
+                document
+                    .getElementById('likedInput')
+                    .value
+                    .trim();
+
+
+            const suggestions =
+                document
+                    .getElementById('suggestionsInput')
+                    .value
+                    .trim();
+
+
+            const negative =
+                document
+                    .getElementById('negativeInput')
+                    .value
+                    .trim();
+
+
+            /* التأكد من اختيار التقييم */
+
+            if (selectedRating === 0) {
+
+                feedbackStatus.style.color =
+                    '#f59e0b';
+
+
+                feedbackStatus.textContent =
+                    'من فضلك اختار تقييم من 1 إلى 5 ⭐';
+
+
+                return;
+
+            }
+
+
+            /* التأكد من كتابة رأي */
+
+            if (
+                liked === '' &&
+                suggestions === '' &&
+                negative === ''
+            ) {
+
+                feedbackStatus.style.color =
+                    '#f59e0b';
+
+
+                feedbackStatus.textContent =
+                    'من فضلك اكتب رأيك قبل إرسال التقييم.';
+
+
+                return;
+
+            }
+
+
+            submitButton.disabled = true;
+
+
+            submitButton.textContent =
+                'جاري إرسال التقييم...';
+
+
+            const feedbackData = {
+
+                timestamp:
+                    new Date()
+                        .toLocaleString('ar-EG'),
+
+                rating:
+                    selectedRating,
+
+                liked:
+                    liked,
+
+                suggestions:
+                    suggestions,
+
+                negative:
+                    negative
+
+            };
+
+
+            try {
+
+                await fetch(
+                    GOOGLE_SHEETS_URL,
+                    {
+                        method: 'POST',
+
+                        mode: 'no-cors',
+
+                        headers: {
+                            'Content-Type':
+                                'text/plain;charset=utf-8'
+                        },
+
+                        body:
+                            JSON.stringify(
+                                feedbackData
+                            )
+                    }
+                );
+
+
+                feedbackStatus.style.color =
+                    '#38d39f';
+
+
+                feedbackStatus.textContent =
+                    'تم إرسال تقييمك بنجاح ✓ شكرًا لمشاركتك ❤️';
+
+
+                localStorage.setItem(
+                    'orientationFeedback',
+                    JSON.stringify(
+                        feedbackData
+                    )
+                );
+
+
+                /* تفريغ الحقول */
+
+                document
+                    .getElementById('likedInput')
+                    .value = '';
+
+
+                document
+                    .getElementById('suggestionsInput')
+                    .value = '';
+
+
+                document
+                    .getElementById('negativeInput')
+                    .value = '';
+
+
+                selectedRating = 0;
+
+
+                stars.forEach(
+                    (star) =>
+                        star.classList.remove('active')
+                );
+
+
+            } catch (error) {
+
+                console.error(
+                    'Google Sheets Error:',
+                    error
+                );
+
+
+                feedbackStatus.style.color =
+                    '#ef4444';
+
+
+                feedbackStatus.textContent =
+                    'حدث خطأ أثناء الإرسال، حاول مرة أخرى.';
+
+            }
+
+
+            submitButton.disabled = false;
+
+
+            submitButton.textContent =
+                'إرسال التقييم';
+
+        }
+    );
+
+
+    /* ================================
+       التفاعل والحركة
+    ================================= */
+
+    const interactiveElements =
+        document.querySelectorAll(
+            '.interactive-element'
+        );
+
+
+    interactiveElements.forEach(el => {
+
+        el.addEventListener(
+            'mouseenter',
+            () => {
+                el.classList.add(
+                    'page-bump'
+                );
+            }
+        );
+
+
+        el.addEventListener(
+            'mouseleave',
+            () => {
+                el.classList.remove(
+                    'page-bump'
+                );
+            }
+        );
+
+
+        el.addEventListener(
+            'click',
+            () => {
+
+                el.classList.add(
+                    'page-bump'
+                );
+
+
+                setTimeout(
+                    () => {
+                        el.classList.remove(
+                            'page-bump'
+                        );
+                    },
+                    250
+                );
+
+            }
+        );
+
+    });
+
+</script>
+```
+
+</body>
+</html>
+
